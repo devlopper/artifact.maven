@@ -1,0 +1,6 @@
+*.*
+!.gitignore
+!.jar
+!.war
+!.ear
+!.pom.xml
