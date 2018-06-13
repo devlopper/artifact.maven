@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.cyk.pom.spring</groupId>
+  <artifactId>pom-spring</artifactId>
+  <versioning>
+    <release>pom.spring.0.0.1</release>
+    <versions>
+      <version>pom.spring.0.0.1</version>
+    </versions>
+    <lastUpdated>20180613143612</lastUpdated>
+  </versioning>
+</metadata>

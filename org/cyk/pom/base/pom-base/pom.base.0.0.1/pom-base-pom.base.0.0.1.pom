@@ -1,0 +1,137 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<name>Base project object model</name>
+	<url>http://www.cykcorp.org</url>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.cyk.pom.base</groupId>
+	<artifactId>pom-base</artifactId>
+	<version>pom.base.0.0.1</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!-- Project -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- Java -->
+		<java.ee.api.version>7.0</java.ee.api.version>
+
+		<!-- Maven -->
+		<maven.compiler.plugin.configuration.source>1.8</maven.compiler.plugin.configuration.source>
+		<maven.compiler.plugin.configuration.target>1.8</maven.compiler.plugin.configuration.target>
+		<maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+
+		<!-- Web archive -->
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+
+		<!-- Tools -->
+		<lombok.version>1.16.14</lombok.version> <!-- Getter and setter -->
+		<mapstruct.version>1.2.0.Final</mapstruct.version> <!-- mapping between object -->
+		<mapstruct.processor.version>1.2.0.Final</mapstruct.processor.version>
+		<!-- Lombok and mapstruct version must be compatible -->
+		
+		<apache.commons-lang3.version>3.7</apache.commons-lang3.version>
+		
+		<!-- ********************************************************************************** -->
+
+		<!-- Test -->
+		<junit.version>4.12</junit.version>
+
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>distribution.management.url</id>
+			<url>${distribution.management.url}</url>
+		</repository>
+	</distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Java EE 7 -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${java.ee.api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- Tools -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- Testing -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${maven.compiler.plugin.configuration.source}</source>
+					<target>${maven.compiler.plugin.configuration.target}</target>
+					<!--annotationProcessorPaths> <path> <groupId>org.mapstruct</groupId> 
+						<artifactId>mapstruct-processor</artifactId> <version>${mapstruct.processor.version}</version> 
+						</path> </annotationProcessorPaths -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-jdk8</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${mapstruct.processor.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${apache.commons-lang3.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<modules>
+		<!-- JEE -->
+		<module>../pom-jee</module>
+		<!-- Spring -->
+		<module>../pom-spring</module>
+		<!-- Others -->
+		<module>../pom-maven-archetype</module>
+	</modules>
+
+</project>

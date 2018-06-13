@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.cyk.pom.jee.server.jboss</groupId>
+  <artifactId>pom-jee-server-jboss</artifactId>
+  <versioning>
+    <release>pom.jee.server.jboss.0.0.1</release>
+    <versions>
+      <version>pom.jee.server.jboss.0.0.1</version>
+    </versions>
+    <lastUpdated>20180613143612</lastUpdated>
+  </versioning>
+</metadata>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.cyk.pom.jee.utility.server</groupId>
+  <artifactId>pom-jee-utility-server</artifactId>
+  <versioning>
+    <release>pom.jee.utility.server.0.0.1</release>
+    <versions>
+      <version>pom.jee.utility.server.0.0.1</version>
+    </versions>
+    <lastUpdated>20180613143612</lastUpdated>
+  </versioning>
+</metadata>

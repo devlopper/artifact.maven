@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.cyk.pom.spring.boot</groupId>
+  <artifactId>pom-spring-boot</artifactId>
+  <versioning>
+    <release>pom.spring.boot.0.0.1</release>
+    <versions>
+      <version>pom.spring.boot.0.0.1</version>
+    </versions>
+    <lastUpdated>20180613143612</lastUpdated>
+  </versioning>
+</metadata>
